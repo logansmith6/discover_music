@@ -11,11 +11,9 @@ class DiscoverMusic::CLI
 
   #list_artists will list all available artists to choose from
   def list_artists
+    @all_artists = DiscoverMusic::Scrape.all_artists
     puts "List of Artists:"
-    puts <<-DOC.gsub /^\s*/, ''
-    1. Jay-Z
-    2. Maroon 5
-    DOC
+    puts "#{@all_artists}\n"
     #@artists = DiscoverMusic::Artists.all
 
   end

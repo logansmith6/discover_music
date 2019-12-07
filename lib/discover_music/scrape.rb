@@ -37,7 +37,9 @@ class DiscoverMusic::Scrape
   end
 
   def self.all_artists
-    doc = Nokogiri::HTML(open("https://www.udiscovermusic.com/artists-a-z/#{@url.join}"))
+    doc = Nokogiri::HTML(open("https://www.udiscovermusic.com/artists-a-z/"))
+    all_artists =  doc.search("a.artist-page-link").map{|individual| individual.text}
+    binding.pry
   end
 
 end
