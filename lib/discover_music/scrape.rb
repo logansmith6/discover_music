@@ -12,7 +12,6 @@ class DiscoverMusic::Scrape
     name_length = chosen_artist.length - 1
 
       if name_length == 0
-
       else
         url_ending = ""
         counter = 1
@@ -41,12 +40,4 @@ class DiscoverMusic::Scrape
     all_artists =  doc.search("a.artist-page-link").map{|individual| individual.text}
     #binding.pry
   end
-
-  #returns list of albums from the associated artist
-  #def self.artist_albums
-  #  doc = Nokogiri::HTML(open("https://www.udiscovermusic.com/artists-a-z/#{@url.join}"))
-  #  all_albums = doc.search("h4.artist-phase-1-titles")
-#
-#  end
-
 end

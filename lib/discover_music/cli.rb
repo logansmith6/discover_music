@@ -45,10 +45,10 @@ class DiscoverMusic::CLI
       when "menu"
         menu
       else
-        puts "\nMusical Biography of #{chosen_artist}"
+        puts "\nMusical Biography of #{chosen_artist.capitalize}:"
         @artists = DiscoverMusic::Artists.pass_artist(chosen_artist)
-        puts "\nType menu to return to the menu or exit to quit."
-        #@albums = DiscoverMusic::Artists.pass_album(chosen_artist)
+        puts "\nTry another artist or type menu to return to the menu and exit to quit."
+
       end
     end
 
