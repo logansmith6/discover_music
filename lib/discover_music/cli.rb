@@ -4,9 +4,8 @@ class DiscoverMusic::CLI
 
   #call method calls the proper methods, in order
   def call
-
+    puts "Hello! Welcome to DiscoverMusic.\n"
     menu
-    goodbye
   end
 
   #list_artists will list all available artists to choose from
@@ -30,7 +29,6 @@ class DiscoverMusic::CLI
 
   #command line user interface menu
   def menu
-    puts "Hello! Welcome to DiscoverMusic.\n"
     puts "If you would like to learn about an artist, go ahead and type their name.\n"
     puts "If you would like to see a list of the artists that we can tell you about, type list (there are over 500!).\n"
     puts "To exit this program, type exit."
@@ -44,12 +42,13 @@ class DiscoverMusic::CLI
       when "list"
         list_artists
         puts "I can tell you about any of these artists, or you can type exit to quit."
+      when "menu"
+        menu
       else
         puts "\nMusical Biography of #{chosen_artist}"
         @artists = DiscoverMusic::Artists.pass_artist(chosen_artist)
-        puts "\n Type menu to return to the menu or exit to quit."
-        @artists = DiscoverMusic::Artists.pass_artist(chosen_artist)
-        puts "\n Type menu to return to the menu or exit to quit."
+        puts "\nType menu to return to the menu or exit to quit."
+        #@albums = DiscoverMusic::Artists.pass_album(chosen_artist)
       end
     end
 
