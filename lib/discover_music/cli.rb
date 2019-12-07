@@ -16,6 +16,7 @@ class DiscoverMusic::CLI
     1. Jay-Z
     2. Maroon 5
     DOC
+    @artists = DiscoverMusic::Artists.all
   end
 
   #command line user interface menu
