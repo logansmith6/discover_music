@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require './lib/discover_music'
+
+
+
+  DiscoverMusic::CLI.new.call
