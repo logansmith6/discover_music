@@ -27,12 +27,20 @@ class DiscoverMusic::CLI
     puts "To exit this program, type exit."
     chosen_artist = nil
     #loop to ask user for input until "exit" is typed
-    while chosen_artist != "exit" && chosen_artist != "list"
+    while chosen_artist != "exit"
       chosen_artist = gets.strip.downcase
-      @artists = DiscoverMusic::Artists.pass_artist(chosen_artist)
+      case chosen_artist
+      when "exit"
+        goodbye
+      when "list"
+        list_artists
+        puts "I can tell you about any of these artists, or you can type exit to quit."
+      else
 
-
+        @artists = DiscoverMusic::Artists.pass_artist(chosen_artist)
+      end
     end
+
   end
 
   #goodbye says goodbye
