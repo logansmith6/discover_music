@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
-require './lib/discover_music'
+
+
+require_relative  '../lib/discover_music'
 
 
 
