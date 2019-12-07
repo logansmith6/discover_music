@@ -42,4 +42,11 @@ class DiscoverMusic::Scrape
     #binding.pry
   end
 
+  #returns list of albums from the associated artist
+  def self.artist_albums
+    doc = Nokogiri::HTML(open("https://www.udiscovermusic.com/artists-a-z/#{@url.join}"))
+    all_albums = doc.search("h4.artist-phase-1-titles")
+
+  end
+
 end

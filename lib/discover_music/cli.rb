@@ -48,6 +48,8 @@ class DiscoverMusic::CLI
         puts "\nMusical Biography of #{chosen_artist}"
         @artists = DiscoverMusic::Artists.pass_artist(chosen_artist)
         puts "\n Type menu to return to the menu or exit to quit."
+        @artists = DiscoverMusic::Artists.pass_artist(chosen_artist)
+        puts "\n Type menu to return to the menu or exit to quit."
       end
     end
 
