@@ -1,6 +1,6 @@
 
 class DiscoverMusic::Artists
-  attr_accessor :name, :albums, :url
+  attr_accessor :name
 
   def self.all
 
