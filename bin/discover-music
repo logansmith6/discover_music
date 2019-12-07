@@ -1,9 +1,3 @@
 #!/usr/bin/env ruby
-
-
 require_relative  '../lib/discover_music'
-
-
-
-
-  DiscoverMusic::CLI.new.call
+DiscoverMusic::CLI.new.call
