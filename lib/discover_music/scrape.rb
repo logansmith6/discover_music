@@ -2,11 +2,9 @@
 class DiscoverMusic::Scrape
   attr_accessor :name, :albums, :url
   #the artist name chosen by the user will be passed in and then used to scrape a specific bio
-  def initialize(name)
-    @name = name
-  end
 
-  def self.scraper(name)
+  def self.url_conversion(name)
+    @name = name
     chosen_artist = name.split(" ")
     name_length = chosen_artist.length - 1
 
@@ -15,7 +13,7 @@ class DiscoverMusic::Scrape
       else
         url_ending = ""
         counter = 1
-        name_length.tiems do
+        name_length.times do
           chosen_artist.insert(counter, "-")
           counter += 2
         end
@@ -23,5 +21,17 @@ class DiscoverMusic::Scrape
       @url = chosen_artist
 
   end
+
+  def self.scraper
+    doc = Nokogiri::HTML(open("https://www.udiscovermusic.com/artists-a-z/#{@url.join}"))
+    artist = doc.search("div.digging-deeper-text").text.strip
+    bio = artist.split
+    better_bio = bio.join(" ")
+    pretty_bio = better_bio.strip
+
+    puts  "    " + artist
+  end
+
+
 
 end

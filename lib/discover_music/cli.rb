@@ -16,7 +16,7 @@ class DiscoverMusic::CLI
     1. Jay-Z
     2. Maroon 5
     DOC
-    @artists = DiscoverMusic::Artists.all
+    #@artists = DiscoverMusic::Artists.all
 
   end
 
@@ -27,16 +27,9 @@ class DiscoverMusic::CLI
     #loop to ask user for input until "exit" is typed
     while chosen_artist != "exit"
       chosen_artist = gets.strip.downcase
-      case chosen_artist
-      when "1"
-        puts "..."
-      when "2"
-        puts "lll"
-      when "menu"
-        list_artists
-      else
-        puts "Invalid selection. Please try again!"
-      end
+      @artists = DiscoverMusic::Artists.pass_artist(chosen_artist)
+
+
     end
   end
 
