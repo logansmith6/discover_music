@@ -3,13 +3,30 @@ DiscoverMusic allows a user to receive a bio of their chosen artist from a scrap
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
 To clone into my gem, type in the following commands:
 
 'git clone git@github.com:logansmith6/discover_music.git'
 'cd discover_music'
 'bundle'
+
+
+Gem installation
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'discover_music'
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install discover_music
+
+
 
 ## Usage
 
