@@ -29,8 +29,9 @@ class DiscoverMusic::Scrape
     doc = Nokogiri::HTML(open("https://www.udiscovermusic.com/artists-a-z/#{@url.join}"))
     bio = doc.search("div.digging-deeper-text").text.strip
     new_bio = DiscoverMusic::Bio.new(bio)
+    new_bio.printer
     #new_bio.bio = bio
-    puts "   " + new_bio.bio
+    #puts "   " + new_bio.bio
     #puts  "    " + bio
   end
 
