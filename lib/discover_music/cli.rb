@@ -35,13 +35,15 @@ class DiscoverMusic::CLI
     chosen_artist = nil
     #loop to ask user for input until "exit" is typed
     while chosen_artist != "exit"
+
       chosen_artist = gets.strip.downcase
+
       case chosen_artist
       when "exit"
         goodbye
       when "list"
         list_artists
-        puts "I can tell you about any of these artists, or you can type exit to quit."
+        puts "I can tell you about any of these artists, or you can type 'exit' to quit."
       when "menu"
         menu
       else
