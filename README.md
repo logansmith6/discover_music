@@ -1,30 +1,20 @@
-read me
-
-# DiscoverMusic
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/discover_music`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+#Description
+DiscoverMusic allows a user to receive a bio of their chosen artist from a scraped list of artists.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-```ruby
-gem 'discover_music'
-```
+To clone into my gem, type in the following commands:
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install discover_music
+'git clone git@github.com:logansmith6/discover_music.git'
+'cd discover_music'
+'bundle'
 
 ## Usage
 
-TODO: Write usage instructions here
+To run my program, after installation type the following command:
+'./bin/discover-music'
 
 ## Development
 
