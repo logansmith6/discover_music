@@ -31,7 +31,7 @@ class DiscoverMusic::CLI
   def menu
     puts "If you would like to learn about an artist, go ahead and type their name.\n"
     puts "If you would like to see a list of the artists that we can tell you about, type list (there are over 500!).\n"
-    puts "To exit this program, type exit."
+    puts "To exit this program, type exit.\n\n"
     chosen_artist = nil
     #loop to ask user for input until "exit" is typed
     while chosen_artist != "exit"
@@ -46,11 +46,18 @@ class DiscoverMusic::CLI
         menu
       else
         puts "\nMusical Biography of #{chosen_artist.capitalize}:"
-        @artists = DiscoverMusic::Bio.pass_artist_bio(chosen_artist)
+        @artists = DiscoverMusic::CLI.pass_artist_bio(chosen_artist)
         puts "\nTry another artist or type menu to return to the menu and exit to quit."
         end
     end
 
+  end
+
+  def self.pass_artist_bio(name)
+    @name = name
+    @bio = DiscoverMusic::Scrape
+    @bio.url_conversion(name)
+    @bio.scraper
   end
 
   #goodbye says goodbye
