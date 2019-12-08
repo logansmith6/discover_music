@@ -1,6 +1,6 @@
 
 class DiscoverMusic::Scrape
-  attr_accessor :name, :albums, :url
+  attr_accessor :name, :url
   #the artist name chosen by the user will be passed in and then used to scrape a specific bio
 
 
