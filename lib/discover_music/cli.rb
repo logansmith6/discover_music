@@ -66,5 +66,4 @@ class DiscoverMusic::CLI
   def goodbye
     puts "Thank you for using Discover Music!"
   end
-
 end

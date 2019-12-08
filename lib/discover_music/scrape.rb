@@ -8,7 +8,8 @@ class DiscoverMusic::Scrape
   #compatible with the website
   def self.url_conversion(name)
     @name = name
-    chosen_artist = name.split(" ")
+    temp_name = name.tr('.', '')
+    chosen_artist = temp_name.split(" ")
     name_length = chosen_artist.length - 1
 
       if name_length == 0
