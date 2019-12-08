@@ -27,12 +27,8 @@ class DiscoverMusic::Scrape
   #specific web address of the user's chosen artist
   def self.scraper
     doc = Nokogiri::HTML(open("https://www.udiscovermusic.com/artists-a-z/#{@url.join}"))
-    artist = doc.search("div.digging-deeper-text").text.strip
-    bio = artist.split
-    better_bio = bio.join(" ")
-    pretty_bio = better_bio.strip
-
-    puts  "    " + artist
+    bio = doc.search("div.digging-deeper-text").text.strip
+    puts  "    " + bio
   end
 
   def self.all_artists

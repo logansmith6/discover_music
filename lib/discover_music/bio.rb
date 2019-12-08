@@ -1,17 +1,18 @@
 
-class DiscoverMusic::Artists
+class DiscoverMusic::Bio
   attr_accessor :name
   @@all = []
 
-  def initialize(name)
+  def initialize(bio)
     @name = name
+    @bio = bio
     @@all << self
   end
 
   def self.pass_artist_bio(name)
 
     @bio = DiscoverMusic::Scrape
-    @bio.url_conversion(@name)
+    @bio.url_conversion(name)
     @bio.scraper
   end
 end
